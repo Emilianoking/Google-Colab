@@ -28,7 +28,6 @@ nav {
     z-index: 1000;
 }
 
-
 nav.sticky {
     position: fixed;
     top: 0;
@@ -68,6 +67,136 @@ nav ul li a {
 
 nav ul li a:hover {
     color: #5a4af5;
+}
+
+.menu-toggle {
+    display: none; /* Oculto por defecto en pantallas grandes */
+    font-size: 1.5em;
+    background: none;
+    border: none;
+    color: #5a4af5;
+    cursor: pointer;
+    padding: 5px;
+    transition: transform 0.3s ease;
+}
+
+.menu-toggle.active {
+    transform: rotate(90deg); /* Animación simple al abrir */
+}
+
+nav ul {
+    transition: max-height 0.3s ease; /* Animación para el menú */
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Muestra el botón en móviles */
+    }
+
+    nav ul {
+        display: none; /* Oculta el menú por defecto en móviles */
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #3409996b;
+        padding: 10px 20px;
+        max-height: 0; /* Inicia cerrado */
+        overflow: hidden;
+    }
+
+    nav ul.active {
+        display: flex;
+        max-height: 300px; /* Altura máxima al abrir */
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        color: #fff; /* Blanco en el menú móvil */
+    }
+
+    nav.sticky {
+        padding: 10px 15px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .feature {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .feature.reverse {
+        flex-direction: column;
+    }
+
+    .feature-img img {
+        max-width: 100%;
+    }
+
+    .cards {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    #Logo .stats {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #Logo .stats img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .feature-text h2 {
+        font-size: 1.5em;
+    }
+
+    .cta h2 {
+        font-size: 1.5em;
+    }
+
+    .cta p {
+        font-size: 1em;
+    }
+
+    .hero h1 {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        max-width: 90%;
+    }
+
+    .testimonial {
+        max-width: 90%;
+    }
+
+    nav {
+        gap: 10px;
+    }
+
+    .logo {
+        font-size: 1.2em;
+    }
+
+    #Logo .stats img {
+        width: 120px;
+        height: 120px;
+    }
+
+    nav.sticky {
+        padding: 8px 10px;
+    }
 }
 
 .hero {
@@ -186,44 +315,70 @@ nav ul li a:hover {
     font-size: 1.3em;
     margin-bottom: 10px;
 }
+ .testimonials {
+      text-align: center;
+      padding: 50px 20px;
+      background-color: #f9f9ff;
+    }
 
-.testimonials {
-    text-align: center;
-    padding: 50px 20px;
-}
+    .testimonials h2 {
+      font-size: 2em;
+      color: #5a4af5;
+      margin-bottom: 30px;
+    }
 
-.testimonials h2 {
-    font-size: 2em;
-    color: #5a4af5;
-    margin-bottom: 30px;
-}
+    .testimonial-grid {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
 
-.testimonial-grid {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
+    .testimonial {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 300px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
 
-.testimonial {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 300px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
+    .testimonial-img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
 
-.testimonial p {
-    font-size: 1em;
-    color: #666;
-}
+    .testimonial p {
+      font-size: 1em;
+      color: #666;
+    }
 
-.testimonial .author {
-    font-weight: bold;
-    color: #5a4af5;
-    margin-top: 10px;
-}
+    .testimonial .author {
+      font-weight: bold;
+      color: #5a4af5;
+      margin-top: 10px;
+    }
 
+    .testimonial a {
+      display: inline-block;
+      margin-top: 10px;
+      color: #5a4af5;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .testimonial a:hover {
+      text-decoration: underline;
+    }
+
+    .github-icon {
+      width: 16px;
+      vertical-align: middle;
+      margin-right: 5px;
+    }
 .cta {
     text-align: center;
     padding: 50px 20px;
@@ -258,90 +413,4 @@ footer {
     background-color: #5a4af5;
     color: #fff;
     font-size: 0.9em;
-}
-
-@media (max-width: 1024px) {
-    .feature {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .feature.reverse {
-        flex-direction: column;
-    }
-
-    .feature-img img {
-        max-width: 100%;
-    }
-
-    .cards {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-}
-
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-
-    #Logo .stats {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    #Logo .stats img {
-        width: 150px;
-        height: 150px;
-    }
-
-    .feature-text h2 {
-        font-size: 1.5em;
-    }
-
-    .cta h2 {
-        font-size: 1.5em;
-    }
-
-    .cta p {
-        font-size: 1em;
-    }
-
-    .hero h1 {
-        font-size: 2em;
-    }
-
-    nav.sticky {
-        padding: 10px 15px;
-    }
-}
-
-@media (max-width: 480px) {
-    .card {
-        max-width: 90%;
-    }
-
-    .testimonial {
-        max-width: 90%;
-    }
-
-    nav {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .logo {
-        font-size: 1.2em;
-    }
-
-    #Logo .stats img {
-        width: 120px;
-        height: 120px;
-    }
-
-    nav.sticky {
-        padding: 8px 10px;
-    }
 }

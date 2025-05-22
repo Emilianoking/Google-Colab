@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QuickPay - Seamless Payments</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header>
         <nav>
             <!-- <div class="logo">Corporación universitaria minuto de Dios</div> -->
-            <div  class="logo">Uniminuto</div>
+            <div class="logo">Uniminuto</div>
+            <button class="menu-toggle">☰</button> <!-- Botón hamburguesa -->
             <ul>
                 <li><a href="#hero">Inicio</a></li>
                 <li><a href="#tendencia-central">Medidas de Tendencia Central</a></li>
@@ -25,8 +28,8 @@
             <!-- <h1>Estadística Divertida con Python y Google Colab</h1> -->
             <div class="statsLogo" id="Logo">
                 <div><img src="img/descarga (1).jpg" alt="150K Users"></div>
-                <div><img src="img/descarga (1).png" alt="80K Transactions"></div>
                 <div><img src="img/descarga.jpg" alt="280K Downloads"></div>
+                <div><img src="img/descarga (1).png" alt="80K Transactions"></div>
                 <div><img src="img/descarga.png" alt="1500+ Partners"></div>
             </div>
         </div>
@@ -49,20 +52,19 @@
             </div>
         </section>
 
-        <section class="feature reverse" id="google-colab">
+        <section class="feature" id="google-colab">
             <div class="feature-text">
-                <h2>Gain insights into your spending habits</h2>
+                <h2>Embrace the speed & ease of cashless payments</h2>
                 <ul>
-                    <li>Analyze your expenses with detailed reports</li>
-                    <li>Set budget goals and track progress</li>
-                    <li>Receive personalized financial insights</li>
-                    <li>Make informed financial decisions</li>
+                    <li>Make instant payments with a single tap</li>
+                    <li>Secure transactions with advanced encryption</li>
+                    <li>Track your expenses in real-time</li>
+                    <li>Enjoy a seamless payment experience</li>
                 </ul>
-                <button>Learn More</button>
+                <button>Get Started</button>
             </div>
             <div class="feature-img">
-                <img src="img/original-3A831488-6D0D-4C0A-AB82-9C81650DF31B.jpeg" alt="Trusted Contacts">
-
+                <img src="img/original-3A831488-6D0D-4C0A-AB82-9C81650DF31B.jpeg" alt="Phone Payment">
             </div>
         </section>
 
@@ -79,52 +81,54 @@
             </div>
             <div class="feature-img">
                 <img src="img/original-FDE8EE4E-D62A-4544-BD47-53D52102E830.jpeg" alt="Spending Habits">
-
             </div>
         </section>
 
-        <section class="cards">
-            <div class="card">
-                <h3>Invite friends and get bonuses</h3>
-                <p>Refer QuickPay to your friends and earn rewards for every successful signup.</p>
-            </div>
-            <div class="card">
-                <h3>Earn cashback on every transaction</h3>
-                <p>Get up to 5% cashback on all your payments with QuickPay.</p>
-            </div>
-        </section>
 
-        <section class="testimonials">
-            <h2>Our customers say we're the best.</h2>
-            <div class="testimonial-grid">
-                <div class="testimonial">
-                    <p>"QuickPay has made my transactions so easy and secure. I love the insights feature!"</p>
-                    <p class="author">— Sarah M.</p>
-                </div>
-                <div class="testimonial">
-                    <p>"I can now split bills with friends in seconds. QuickPay is a game-changer!"</p>
-                    <p class="author">— John D.</p>
-                </div>
-                <div class="testimonial">
-                    <p>"The cashback feature is amazing. I save money with every payment!"</p>
-                    <p class="author">— Emily R.</p>
-                </div>
-            </div>
-        </section>
+       <section class="testimonials">
+  <h2>Landing page creada por nuestro equipo</h2>
+  <div class="testimonial-grid">
 
-        <section class="cta">
-            <h2>Don't miss out on this exciting revolution today</h2>
-            <p>Download the app and enjoy seamless payments with QuickPay.</p>
-            <button>Subscribe & get 30% discount</button>
-        </section>
+    <div class="testimonial">
+      <img src="img/Camilo.jpeg" alt="Foto de Camilo" class="testimonial-img">
+      <p>Camilo Gómez lideró y supervisó el desarrollo general del proyecto como desarrollador full stack junior.</p>
+      <a href="https://github.com/CamiloUsuario" target="_blank">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub" class="github-icon">
+        GitHub de Camilo
+      </a>
+    </div>
+
+    <div class="testimonial">
+      <img src="img/gustavo.jpeg" alt="Foto de Gustavo" class="testimonial-img">
+      <p>Gustavo Castillo diseñó y desarrolló la plantilla de la sección teórica con un estilo visual propio.</p>
+      <a href="https://github.com/GustavoUsuario" target="_blank">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub" class="github-icon">
+        GitHub de Gustavo
+      </a>
+    </div>
+
+    <div class="testimonial">
+      <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Foto de Sofía" class="testimonial-img">
+      <p>Sofía Alzate fue responsable de la creación de la plantilla de programación en Google Colab, aplicando su diseño personal.</p>
+      <a href="https://github.com/SofiaUsuario" target="_blank">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub" class="github-icon">
+        GitHub de Sofía
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
     </main>
 
     <footer>
         <p>© 2025 QuickPay. All rights reserved.</p>
     </footer>
-      <script>
+
+    <script>
         // Sticky Navbar
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             const nav = document.querySelector('nav');
             if (window.scrollY > 50) {
                 nav.classList.add('sticky');
@@ -135,7 +139,7 @@
 
         // Smooth Scroll for Nav Links
         document.querySelectorAll('nav ul li a').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
+            anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const targetId = this.getAttribute('href').substring(1);
                 const targetElement = document.getElementById(targetId);
@@ -146,9 +150,24 @@
                         top: targetPosition,
                         behavior: 'smooth'
                     });
+                    // Cierra el menú móvil después de hacer clic
+                    const navUl = document.querySelector('nav ul');
+                    if (navUl.classList.contains('active')) {
+                        navUl.classList.remove('active');
+                        document.querySelector('.menu-toggle').classList.remove('active');
+                    }
                 }
             });
         });
+
+        // Toggle Menu for Mobile
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navUl = document.querySelector('nav ul');
+        menuToggle.addEventListener('click', function () {
+            this.classList.toggle('active');
+            navUl.classList.toggle('active');
+        });
     </script>
 </body>
+
 </html>
