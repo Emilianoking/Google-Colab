@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickPay - Seamless Payments</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <!-- <div class="logo">Corporación universitaria minuto de Dios</div> -->
+            <div  class="logo">Uniminuto</div>
+            <ul>
+                <li><a href="#hero">Inicio</a></li>
+                <li><a href="#tendencia-central">Medidas de Tendencia Central</a></li>
+                <li><a href="#google-colab">Clase con Google Colab</a></li>
+                <li><a href="#complemento">Complemento</a></li>
+            </ul>
+        </nav>
+        <div class="hero" id="hero">
+            <!-- <h1>Big Data para Principiantes: De la Teoría a la Práctica</h1> -->
+            <h1>Jugando con Datos: Matemáticas + Programación</h1>
+            <!-- <h1>Aprende Estadística y Big Data con Google Colab</h1> -->
+            <!-- <h1>Estadística Divertida con Python y Google Colab</h1> -->
+            <div class="statsLogo" id="Logo">
+                <div><img src="img/descarga (1).jpg" alt="150K Users"></div>
+                <div><img src="img/descarga (1).png" alt="80K Transactions"></div>
+                <div><img src="img/descarga.jpg" alt="280K Downloads"></div>
+                <div><img src="img/descarga.png" alt="1500+ Partners"></div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="feature" id="tendencia-central">
+            <div class="feature-text">
+                <h2>Embrace the speed & ease of cashless payments</h2>
+                <ul>
+                    <li>Make instant payments with a single tap</li>
+                    <li>Secure transactions with advanced encryption</li>
+                    <li>Track your expenses in real-time</li>
+                    <li>Enjoy a seamless payment experience</li>
+                </ul>
+                <button>Get Started</button>
+            </div>
+            <div class="feature-img">
+                <img src="img/original-FDE8EE4E-D62A-4544-BD47-53D52102E830.jpeg" alt="Phone Payment">
+            </div>
+        </section>
+
+        <section class="feature reverse" id="google-colab">
+            <div class="feature-text">
+                <h2>Gain insights into your spending habits</h2>
+                <ul>
+                    <li>Analyze your expenses with detailed reports</li>
+                    <li>Set budget goals and track progress</li>
+                    <li>Receive personalized financial insights</li>
+                    <li>Make informed financial decisions</li>
+                </ul>
+                <button>Learn More</button>
+            </div>
+            <div class="feature-img">
+                <img src="img/original-3A831488-6D0D-4C0A-AB82-9C81650DF31B.jpeg" alt="Trusted Contacts">
+
+            </div>
+        </section>
+
+        <section class="feature" id="complemento">
+            <div class="feature-text">
+                <h2>Pay with complete confidence to your trusted contacts</h2>
+                <ul>
+                    <li>Send money to friends and family instantly</li>
+                    <li>Verify contacts with secure authentication</li>
+                    <li>Split bills effortlessly with group payments</li>
+                    <li>Keep track of all transactions in one place</li>
+                </ul>
+                <button>Try Now</button>
+            </div>
+            <div class="feature-img">
+                <img src="img/original-FDE8EE4E-D62A-4544-BD47-53D52102E830.jpeg" alt="Spending Habits">
+
+            </div>
+        </section>
+
+        <section class="cards">
+            <div class="card">
+                <h3>Invite friends and get bonuses</h3>
+                <p>Refer QuickPay to your friends and earn rewards for every successful signup.</p>
+            </div>
+            <div class="card">
+                <h3>Earn cashback on every transaction</h3>
+                <p>Get up to 5% cashback on all your payments with QuickPay.</p>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <h2>Our customers say we're the best.</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial">
+                    <p>"QuickPay has made my transactions so easy and secure. I love the insights feature!"</p>
+                    <p class="author">— Sarah M.</p>
+                </div>
+                <div class="testimonial">
+                    <p>"I can now split bills with friends in seconds. QuickPay is a game-changer!"</p>
+                    <p class="author">— John D.</p>
+                </div>
+                <div class="testimonial">
+                    <p>"The cashback feature is amazing. I save money with every payment!"</p>
+                    <p class="author">— Emily R.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <h2>Don't miss out on this exciting revolution today</h2>
+            <p>Download the app and enjoy seamless payments with QuickPay.</p>
+            <button>Subscribe & get 30% discount</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 QuickPay. All rights reserved.</p>
+    </footer>
+      <script>
+        // Sticky Navbar
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('sticky');
+            } else {
+                nav.classList.remove('sticky');
+            }
+        });
+
+        // Smooth Scroll for Nav Links
+        document.querySelectorAll('nav ul li a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    const offset = 80; // Ajuste para el espacio del navbar fijo
+                    const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - offset;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
