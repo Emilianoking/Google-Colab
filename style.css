@@ -319,6 +319,24 @@ nav ul {
     margin-right: 5px;
 }
 
+.email-icon {
+    width: 16px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.email-link {
+    display: inline-block;
+    margin-top: var(--spacing-small);
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.email-link:hover {
+    text-decoration: underline;
+}
+
 /* Estilos de la sección CTA (Call to Action) */
 .cta {
     text-align: center;
